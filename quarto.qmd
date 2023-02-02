@@ -1,0 +1,16 @@
+---
+title: "t54"
+format: html
+editor: visual
+author: "Dermot"
+---
+
+## 
+
+```{r}
+#| echo :false
+#| output: false
+
+library(tidyverse)
+x <- read_rds("data/ec.rds")
+```
