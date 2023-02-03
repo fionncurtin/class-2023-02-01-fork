@@ -6,9 +6,15 @@ format: html
 
 ```{r}
 #| echo: false
-#| output: false
 
 library(tidyverse)
 
 x <- read_rds("data/ec.rds")
+
+x |>
+  mutate(state = str_replace(county_name, ".*, ", "")) |>
+  select(state, pop2018) |>
+  arrange(desc(pop2018))
+
+
 ```
